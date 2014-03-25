@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>history.pushState without Chrome fix</title>
+</head>
+<body>
+  <div id="menu">
+    <ul>
+      <li>
+        @Html.ActionLink("Pagina 1", "Page1")
+      </li>
+      <li>
+        @Html.ActionLink("Pagina 2", "Page2")
+      </li>
+    </ul>
+  </div>
+  <div id="mainContent">
+    @RenderBody()
+  </div>
+  <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+  <script src="~/Scripts/site.js"></script>
+</body>
+</html>

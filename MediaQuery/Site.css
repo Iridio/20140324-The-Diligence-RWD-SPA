@@ -1,0 +1,59 @@
+﻿html {
+  /* font-size: 30px; */
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+div {
+  border: 1px solid #ff0000;
+  float: left;
+}
+
+.div1 {
+  width: 80%;
+}
+
+.div2 {
+  width: 80%;
+}
+
+.div3 {
+  width: 80%;
+  height: 400px;
+  background: url("cat1.jpg") no-repeat;
+  color: #fff;
+}
+
+/* 
+  Usiamo gli em nel min-width per avere una soluzione più flessibile nel caso cambi la dimensione del font di default
+  1024px / 16px (font di default) = 64em
+  800px / 16px (font di default) = 50em
+  http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
+*/
+@media screen and (min-width: 64em) {
+  h1 {
+    font-size: 2.8em;
+  }
+}
+
+@media screen and (max-width:50em) {
+  .div1 {
+    width: 40%;
+  }
+
+  .div2 {
+    width: 40%;
+    float: right;
+  }
+
+  .div3 {
+    width: 100%;
+    background: url("cat2.jpg") no-repeat;
+  }
+
+  h1 {
+    font-size: 0.8em;
+  }
+}
